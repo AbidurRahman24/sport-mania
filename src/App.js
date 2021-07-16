@@ -1,11 +1,10 @@
 import React from 'react';
-import Club from './component/Club/Club';
+import Leagues from './component/Leagues/Leagues';
 
 function App() {
   return (
-    <div className="App">
-     <h1>Hello World</h1>
-     <Club></Club>
+    <div>
+     <Leagues></Leagues>
     </div>
   );
 }
