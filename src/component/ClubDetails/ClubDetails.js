@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from 'react';
+import './ClubDetail.css'
 import { useParams } from 'react-router-dom';
 import male from '../../image/male.png';
 import female from '../../image/female.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faCoffee, fabFacebook, faThumbsUp } from '@fortawesome/free-solid-svg-icons'
 
 const ClubDetails = () => {
     let { clubId } = useParams()
     const [clubDetails, setClubDetails] = useState({})
-    const {dateFirstEvent, strCountry, strSport, strDescriptionEN,  strLogo,strGender } = clubDetails;
+    const { dateFirstEvent, strCountry, strSport, strDescriptionEN, strLogo, strGender } = clubDetails;
     useEffect(() => {
         const URL = `https://www.thesportsdb.com/api/v1/json/1/lookupleague.php?id=${clubId}`
         fetch(URL)
@@ -16,35 +19,43 @@ const ClubDetails = () => {
                 console.log(data.leagues[0])
             })
     }, [clubId])
-    const detailsHeader = {
-        width: '100%',
-        height: ' 250px'
+    const header = {
+        backgroundImage: `url(${strLogo})`,
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        height: '300px'
     }
 
     return (
         <div>
-            <div className="cardDetailsHeader">
-                <img src={strLogo} alt="" style={detailsHeader} />
+            <div className="cardDetailsHeader" style={header}>
             </div>
-            <div className="container">
-                <div className="row">
-                    <div class="col">
-                        <h3>Premier League</h3>
-                        <p>Founder: {dateFirstEvent} </p>
-                        <p>Country: {strCountry}</p>
-                        <p>Sport Type: {strSport}</p>
-                        <p>Gender: {strGender}</p>
+            <div className="detailsContainer" style={{ backgroundColor: '#0E0A2A' }}>
+                <div className="container " >
+                    <div className="row  card-head">
+                        <div class="col ">
+                            <h3>Premier League</h3>
+                            <p>Founder: {dateFirstEvent} </p>
+                            <p>Country: {strCountry}</p>
+                            <p>Sport Type: {strSport}</p>
+                            <p>Gender: {strGender}</p>
+                        </div>
+                        <div class="col card-head" >
+                            {
+                                strGender ? <img src={male} alt="" /> : <img src={female} alt="" />
+                            }
+                        </div>
                     </div>
-                    <div class="col" >
-                        {
-                            strGender ? male : female
-                        }
+                    <p style={{ marginTop: '20px', color: 'white' }}>{strDescriptionEN}</p>
+                    <div className="icon">
+                    <FontAwesomeIcon icon={faCoffee} />
+                    <FontAwesomeIcon icon={faThumbsUp } />
+                    
                     </div>
                 </div>
-                <p>{strDescriptionEN}</p>
             </div>
         </div>
     );
 };
-
 export default ClubDetails;
