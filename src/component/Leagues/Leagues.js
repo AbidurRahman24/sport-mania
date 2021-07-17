@@ -17,20 +17,18 @@ const Leagues = () => {
     }, [])
     return (
         <div>
-
-            <div class="hero-image">
-                <div class="hero-text">
-                    <h1>I am John Doe</h1>
-                    <p>And I'm a Photographer</p>
-                    <button>Hire me</button>
-                </div>
-            </div>
-            {
+            <div className="container">
+                <div className="row">
+                    <div className="header col-md-12 col-sm-12">
+                    {
                 first10.map(club => <Club
                     club={club}
                     key={club.idLeague}
                 ></Club>)
             }
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };

@@ -12,19 +12,21 @@ const Club = (props) => {
         padding: '10px',
     }
     return (
-        <div>
-            <Card className="text-center" style={cardStyle}>
+        <div className="flex-fill">
+            <div className="container">
+                 <Card className="text-center h-100" style={cardStyle}>
                 <Card.Img variant="top" src={image1} />
-                <Card.Body>
+                 <Card.Body className='text-muted'>
                     <Card.Title>{strLeague}</Card.Title>
                     <Card.Text>Sport Type: {strSport} <br />
                         <Link to={`/club/${idLeague}`}>
                             <Button>More Details</Button>
                         </Link>
                     </Card.Text>
-                </Card.Body>
-            </Card>
-        </div>
+                 </Card.Body>
+                </Card>
+             </div>
+            </div>
     );
 };
 
