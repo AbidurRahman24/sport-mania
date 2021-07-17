@@ -4,7 +4,7 @@ import Club from '../Club/Club';
 const Leagues = () => {
     const [club, setClub] = useState([]);
     const first10 = club.slice(0, 10);
-    console.log(first10);
+    // console.log(first10);
     useEffect(() => {
         const url = 'https://www.thesportsdb.com/api/v1/json/1/all_leagues.php';
         fetch(url)
