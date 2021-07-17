@@ -7,6 +7,7 @@ import {
   Link
 } from "react-router-dom";
 import ClubDetails from './component/ClubDetails/ClubDetails';
+import Coditional from './component/CodiPractice/Coditional';
 
 function App() {
   return (

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-
 const ClubDetails = () => {
     let {clubId} = useParams()
     const [clubDetails, setClubDetails] = useState({})
@@ -17,7 +16,7 @@ const ClubDetails = () => {
     return (
         <div>
             <img src={strFanart1} alt="" />
-            <img src={strLogo} alt="" style={{backgroundColor:'black'}} />
+            <img src={strLogo} alt="" style={{backgroundColor:'salmon'}} />
             <h2>Country Name: {strCountry}</h2>
             <p>Year: {strCurrentSeason}</p>
             <p>{strDescriptionEN}</p>
