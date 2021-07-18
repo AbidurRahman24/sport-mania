@@ -9,6 +9,8 @@ const Coditional = () => {
             {
                 friend ? <p>SHe is my friend</p> : <p>She is not my friend</p>
             }
+
+
         </div>
     );
 };

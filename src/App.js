@@ -4,10 +4,8 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 import ClubDetails from './component/ClubDetails/ClubDetails';
-import Coditional from './component/CodiPractice/Coditional';
 import Header from './component/Header/Header';
 import NoMatch from './component/NoMatch/NoMatch';
 
