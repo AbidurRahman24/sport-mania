@@ -16,10 +16,10 @@ const Leagues = () => {
             })
     }, [])
     return (
-        <div>
+        <div className=" bg-dark">
             <div className="container">
                 <div className="row">
-                    <div className="header col-md-12 col-sm-12">
+                    <div className="header bg-dark my-5">
                     {
                 first10.map(club => <Club
                     club={club}

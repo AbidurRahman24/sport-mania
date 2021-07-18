@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import male from '../../image/male.png';
 import female from '../../image/female.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faCoffee, fabFacebook, faThumbsUp } from '@fortawesome/free-solid-svg-icons'
+import {faCoffee, faShoppingBag, faFacebookSquar, faFacebookSquare} from '@fortawesome/free-solid-svg-icons'
 
 const ClubDetails = () => {
     let { clubId } = useParams()
@@ -21,10 +21,11 @@ const ClubDetails = () => {
     }, [clubId])
     const header = {
         backgroundImage: `url(${strLogo})`,
+        backgroundColor:'salmon',
         backgroundPosition: 'center',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
-        height: '300px'
+        height: '300px',
     }
 
     return (
@@ -43,14 +44,12 @@ const ClubDetails = () => {
                         </div>
                         <div class="col card-head" >
                             {
-                                strGender ? <img src={male} alt="" /> : <img src={female} alt="" />
+                                strGender ? <img className='conditional-ima' src={male} alt="" /> : <img className='conditional-ima' src={female} alt="" />
                             }
                         </div>
                     </div>
                     <p style={{ marginTop: '20px', color: 'white' }}>{strDescriptionEN}</p>
                     <div className="icon">
-                    <FontAwesomeIcon icon={faCoffee} />
-                    <FontAwesomeIcon icon={faThumbsUp } />
                     
                     </div>
                 </div>

@@ -10,10 +10,19 @@ const Header = () => {
         backgroundRepeat: 'no-repeat',
         height: '300px'
     }
+
     return (
-        <div style={header}>
-            <div className="main-header" >
-                <h2>Sport mania</h2>
+        <div className="">
+            <div className="row">
+                <div className="col-md-12">
+                    <div style={header}>
+                        <div className="row">
+                            <div className="main-header " >
+                                <h2>Sport mania</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );

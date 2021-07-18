@@ -9,6 +9,7 @@ import {
 import ClubDetails from './component/ClubDetails/ClubDetails';
 import Coditional from './component/CodiPractice/Coditional';
 import Header from './component/Header/Header';
+import NoMatch from './component/NoMatch/NoMatch';
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
          </Route>
          <Route path='/club/:clubId'>
            <ClubDetails></ClubDetails>
+         </Route>
+         <Route path='*'>
+           <NoMatch></NoMatch>
          </Route>
        </Switch>
      </Router>
