@@ -3,8 +3,8 @@ import './ClubDetail.css'
 import { useParams } from 'react-router-dom';
 import male from '../../image/male.png';
 import female from '../../image/female.png';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import {faCoffee, faShoppingBag, faFacebookSquar, faFacebookSquare} from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCoffee, } from '@fortawesome/free-solid-svg-icons'
 
 const ClubDetails = () => {
     let { clubId } = useParams()
@@ -49,8 +49,8 @@ const ClubDetails = () => {
                         </div>
                     </div>
                     <p style={{ marginTop: '20px', color: 'white' }}>{strDescriptionEN}</p>
-                    <div className="icon">
-                    
+                    <div style={{color:'white'}} className="icon">
+                    <FontAwesomeIcon icon={faCoffee} />
                     </div>
                 </div>
             </div>

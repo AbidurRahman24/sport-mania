@@ -12,17 +12,11 @@ const Header = () => {
     }
 
     return (
-        <div className="">
-            <div className="row">
-                <div className="col-md-12">
-                    <div style={header}>
-                        <div className="row">
-                            <div className="main-header " >
-                                <h2>Sport mania</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div className="row"  style={header}>
+            <div className="col-md-12 ">
+               <div className="d-flex justify-content-center lign-items-center" style={{height:'300px'}}>
+               <h2 style={{color:'#ffffff'}}>Sport Mania</h2>
+               </div>
             </div>
         </div>
     );
